@@ -24,7 +24,7 @@
        <li><a href="http://farama.net/dashboard/fa" class="btn-floating fab-btn tooltip-right farama-color" title="مشاوره هوشمند فیت آسا">
                فراما </a></li>
 
-       <li><a href="#" class="btn-floating fab-btn app-color tooltip-right" title="اپلیکیشن سلامت هوشمند">
+       <li><a href="#" class="btn-floating fab-btn app-color tooltip-right" title="اپلیکیشن فیت آسا">
                اپ </a></li>
 
        <li><a href="http://arzyabi.fitasa.ir/" class="btn-floating fab-btn hooma-color tooltip-right" title="ارزیابی و بازخورد هوشمند فیت آسا">
