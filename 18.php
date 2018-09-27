@@ -189,7 +189,7 @@
                         <div class="clear"></div>
                         <div class="col s12 m3 margin-upload-btn right margin-top-10">
                             <label for="input-file-max-fs">بارگذاری عکس باشگاه</label>
-                            <input type="file" id="input-file-max-fs" class="dropify-fa narrow" data-max-file-size="800K"/>
+                            <input type="file" id="input-file-max-fs" class="dropify-fa narrow" data-max-file-size="900K"/>
                         </div>
                         <div class="col s12 ">
                             <p class="right-align mr-15">امکانات باشگاه</p>
@@ -399,10 +399,33 @@
 <script>  
     // Basic
     $('.dropify').dropify();
-    $(document).trigger('buttonClick');
 
     $("#input-file-max-fs").on('change', function() {
-       console.log("preview")
+       setTimeout(function(){
+        var imageURL = $(".dropify-render img").attr("src");
+        // var drEvent = $('.dropify').dropify();
+        // drEvent = drEvent.data('dropify');
+        // drEvent.destroy();
+        // drEvent.init();
+      
+        var content =       '<div class="item">'+ 
+                                '<button class="delete" onClick=deleteFromGallery($(this),event)>'+
+                                    '<i class="mdi-action-delete"></i>'+
+                                '</button>'+ 
+                                '<img src="'+imageURL+'">'+
+                            '</div>'
+                 
+
+
+        var owl = $(".owl-carousel");
+        owl.append(content);
+        $(".owl-carousel").owlCarousel('destroy');
+        // $(".owl-carousel").owlCarousel('refresh');
+        Slider();
+       }, 1000);
+
+
+      
     });
     // Translated
     $('.dropify-fa').dropify({
@@ -433,26 +456,29 @@
         }
     })
 
-
-    $(".owl-carousel").owlCarousel({
-    rtl: true,
-    loop: false,
-    autoHeight:true,
-    margin: 10,
-    nav: false,
-    // rtl:false,
-    responsive: {
-        0: {
-        items: 1
-        },
-        600: {
-        items: 3
-        },
-        1000: {
-        items: 4
-        }
+    function Slider(){
+        $(".owl-carousel").owlCarousel({
+                rtl: true,
+                loop: false,
+                autoHeight:true,
+                margin: 10,
+                nav: false,
+            // rtl:false,
+            responsive: {
+                0: {
+                items: 1
+                },
+                600: {
+                items: 3
+                },
+                1000: {
+                items: 4
+                }
+            }
+        });
     }
-    });
+    Slider();
+
 </script>
 </body>
 
