@@ -1,0 +1,2402 @@
+/*================================================================================
+	Item Name: Materialize - Material Design Admin Template
+	Version: 3.1
+	Author: GeeksLabs
+	Author URL: http://www.themeforest.net/user/geekslabs
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN CSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.
+  Author : Mohsen Sabbaghi
+  */
+
+/*font asalamat */
+@font-face {
+    font-family: 'asalamat';
+    src: url('../../font/a-salamat/A.Salamat_p30download.com.eot') format('eot'),
+    url('../../font/a-salamat/A.Salamat_p30download.com.woff') format('woff'),
+    url('../../font/a-salamat/A.Salamat_p30download.com.ttf') format('truetype'),
+    url('../../font/a-salamat/A.Salamat_p30download.com.svg') format('svg');
+    font-size: 16pt;
+    font-weight: normal;
+}
+
+/*=========================== Flaticon icon font: Flaticon  ==========================*/
+@font-face {
+    font-family: "Flaticon";
+    src: url("../../font/flaticon/Flaticon.eot");
+    src: url("../../font/flaticon/Flaticon.eot?#iefix") format("embedded-opentype"),
+    url("../../font/flaticon/Flaticon.woff") format("woff"),
+    url("../../font/flaticon/Flaticon.ttf") format("truetype"),
+    url("../../font/flaticon/Flaticon.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family: "Flaticon";
+        src: url("../../font/flaticon/Flaticon.svg#Flaticon") format("svg");
+    }
+}
+
+/* --------------- error input field ------------------- */
+
+.input-field div.error{
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 0.9rem;
+    color:#FF4081;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+}
+
+input[type=text].valid,
+input[type=text]:focus.valid,
+input[type=password].valid,
+input[type=password]:focus.valid {
+    /*background-color: rgba(0, 230, 118, 0.28) !important;*/
+    font-size: 1.1rem !important;
+}
+
+
+/* ------------------------ end error input field -------------------- */
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-family: Flaticon;
+    font-size: 25px;
+    font-style: normal;
+}
+
+.flaticon-add:before {
+    content: "\f100";
+}
+
+.flaticon-alphabet:before {
+    content: "\f101";
+}
+
+.flaticon-apartment:before {
+    content: "\f102";
+}
+
+.flaticon-arrow:before {
+    content: "\f103";
+}
+
+.flaticon-arrows:before {
+    content: "\f104";
+}
+
+.flaticon-black:before {
+    content: "\f105";
+}
+
+.flaticon-black-1:before {
+    content: "\f106";
+}
+
+.flaticon-business:before {
+    content: "\f107";
+}
+
+.flaticon-business-1:before {
+    content: "\f108";
+}
+
+.flaticon-business-2:before {
+    content: "\f109";
+}
+
+.flaticon-business-3:before {
+    content: "\f10a";
+}
+
+.flaticon-business-4:before {
+    content: "\f10b";
+}
+
+.flaticon-case:before {
+    content: "\f10c";
+}
+
+.flaticon-circle:before {
+    content: "\f10d";
+}
+
+.flaticon-circles:before {
+    content: "\f10e";
+}
+
+.flaticon-communication:before {
+    content: "\f10f";
+}
+
+.flaticon-connection:before {
+    content: "\f110";
+}
+
+.flaticon-construction:before {
+    content: "\f111";
+}
+
+.flaticon-cup:before {
+    content: "\f112";
+}
+
+.flaticon-decreasing:before {
+    content: "\f113";
+}
+
+.flaticon-delete:before {
+    content: "\f114";
+}
+
+.flaticon-document:before {
+    content: "\f115";
+}
+
+.flaticon-draw:before {
+    content: "\f116";
+}
+
+.flaticon-editing:before {
+    content: "\f117";
+}
+
+.flaticon-favorite:before {
+    content: "\f118";
+}
+
+.flaticon-file:before {
+    content: "\f119";
+}
+
+.flaticon-fruit:before {
+    content: "\f11a";
+}
+
+.flaticon-graph:before {
+    content: "\f11b";
+}
+
+.flaticon-group:before {
+    content: "\f11c";
+}
+
+.flaticon-interface:before {
+    content: "\f11d";
+}
+
+.flaticon-interface-1:before {
+    content: "\f11e";
+}
+
+.flaticon-interface-2:before {
+    content: "\f11f";
+}
+
+.flaticon-interface-3:before {
+    content: "\f120";
+}
+
+.flaticon-interface-4:before {
+    content: "\f121";
+}
+
+.flaticon-interface-5:before {
+    content: "\f122";
+}
+
+.flaticon-link:before {
+    content: "\f123";
+}
+
+.flaticon-lock:before {
+    content: "\f124";
+}
+
+.flaticon-notes:before {
+    content: "\f125";
+}
+
+.flaticon-peace:before {
+    content: "\f126";
+}
+
+.flaticon-pen:before {
+    content: "\f127";
+}
+
+.flaticon-pen-1:before {
+    content: "\f128";
+}
+
+.flaticon-pen-2:before {
+    content: "\f129";
+}
+
+.flaticon-people:before {
+    content: "\f12a";
+}
+
+.flaticon-people-1:before {
+    content: "\f12b";
+}
+
+.flaticon-power:before {
+    content: "\f12c";
+}
+
+.flaticon-security:before {
+    content: "\f12d";
+}
+
+.flaticon-shapes:before {
+    content: "\f12e";
+}
+
+.flaticon-shapes-1:before {
+    content: "\f12f";
+}
+
+.flaticon-sign:before {
+    content: "\f130";
+}
+
+.flaticon-signs:before {
+    content: "\f131";
+}
+
+.flaticon-social:before {
+    content: "\f132";
+}
+
+.flaticon-social-1:before {
+    content: "\f133";
+}
+
+.flaticon-social-2:before {
+    content: "\f134";
+}
+
+.flaticon-social-network:before {
+    content: "\f135";
+}
+
+.flaticon-speech-bubble:before {
+    content: "\f136";
+}
+
+.flaticon-square:before {
+    content: "\f137";
+}
+
+.flaticon-square-1:before {
+    content: "\f138";
+}
+
+.flaticon-squares:before {
+    content: "\f139";
+}
+
+.flaticon-squares-1:before {
+    content: "\f13a";
+}
+
+.flaticon-squares-2:before {
+    content: "\f13b";
+}
+
+.flaticon-stadium:before {
+    content: "\f13c";
+}
+
+.flaticon-symbol:before {
+    content: "\f13d";
+}
+
+.flaticon-symbols:before {
+    content: "\f13e";
+}
+
+.flaticon-technology:before {
+    content: "\f13f";
+}
+
+.flaticon-time:before {
+    content: "\f140";
+}
+
+.flaticon-tool:before {
+    content: "\f141";
+}
+
+.flaticon-web:before {
+    content: "\f142";
+}
+
+/*////////////////////main css changes ///////////////////////*/
+
+html {
+    font-family: 'asalamat', sans-serif !important;
+    font-size: 16pt;
+}
+
+body {
+    direction: rtl;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+.rtl {
+    direction: rtl !important;
+}
+
+.breadcrumbs-title {
+    margin: 0 20px !important;
+}
+
+.row-margin0-bottom {
+    margin-bottom: 0;
+}
+
+.select-wrapper span.caret {
+    top: 30px;
+}
+
+.ib-text {
+    display: inline-block;
+    text-align: right !important;
+    margin: 0 !important;
+    color: #9e9e9e !important;
+    white-space: nowrap;
+}
+
+.btn-floating i { /*overriden*/
+    font-size: 1.2rem !important;
+}
+
+.btn {
+    padding: 0 6px !important;
+    letter-spacing: 0 !important;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.white-color-checkbox [type="checkbox"]:checked + label:before {
+    border-color: white !important;;
+}
+
+/*----------------------------I-FRAME-------------------------------*/
+.margin-20 {
+    margin: 10px 20px;
+}
+
+.popup {
+    display: block !important;
+}
+
+.close-popup {
+
+}
+
+.iframe-holder {
+    /*position: relative;*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .8);
+    z-index: 98;
+    display: none;
+}
+
+.iframe-wrapper {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fafafa;
+    padding: 0;
+    height: 85%;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 2px;
+
+}
+
+.my-iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/*/////////////////////////////Farzan Header/////////////////////////////*/
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+    display: block;
+    font-size: 1.4rem;
+}
+nav ul li:hover, nav ul li.active {
+    background-color: transparent !important;
+}
+a.my-nav:active, a.my-nav:hover {
+    color: #B424BA !important;
+}
+.notification-badge {
+    position: relative;
+    right: -26px;
+    top: -17px;
+    color: #ffffff;
+    background-color: #ff3338;
+    margin: 0 -.8em;
+    border-radius: 50%;
+    padding: 0 8px;
+    z-index: 2;
+}
+.controls {
+    height: inherit;
+    margin-left: 20px;
+}
+.header-text-style2 {
+    margin: 40px 30px 0 0;
+    border-bottom: 4px double white;
+}
+.controls li {
+    height: inherit;
+    /*padding-right: 10px;*/
+}
+
+.controls li a {
+    padding: 0 !important;
+}
+
+.controls li:nth-child(2) a {
+    margin-top: 2px;
+}
+
+.controls li a i {
+    margin: 0 !important;
+    padding: 0 5px !important;
+}
+
+.top-2px {
+    margin-top: 2px;
+}
+
+/*=============================misc============================*/
+.checkbox-on-table {
+    margin: 0 !important;
+    line-height: 0;
+}
+
+.breadcrumbs-logo-align {
+    padding: 0 15px 0 0 !important;
+}
+
+.top-bottom-margin {
+    margin: 10px 0;
+}
+
+.margin-top-0 {
+    margin-top: 0 !important;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0 !important;
+}
+
+.margin-left-0 {
+    margin-left: 0 !important;
+}
+
+.margin-right-0 {
+    margin-right: 0 !important;
+}
+.margin-top-40 {
+    margin-top: 40px !important;
+}
+
+.margin-0 {
+    margin: 0 !important;
+}
+
+.force-right {
+    float: right !important;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.input-label-align {
+    margin-top: 8% !important;
+}
+
+.input-field label {
+    top: 1.5rem !important;
+    right: 3rem !important;
+    white-space: nowrap;
+}
+
+.number-input-label {
+    margin-right: -15px !important;
+    white-space: nowrap;
+}
+
+.input-field .prefix ~ input,
+.input-field .prefix ~ textarea {
+    margin: 15px 2.2rem 15px 0 !important;
+    width: calc(100% - 3rem);
+}
+
+.my-custom-list li {
+    float: right;
+    margin-left: 10px;
+}
+
+.my-custom-ddp {
+    width: 230px !important;
+}
+
+.my-custom-ddp li a {
+    white-space: nowrap;
+    font-size: 15pt;
+}
+
+/*----------------Radio Button and check box customization-------------------*/
+
+[type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
+    padding-right: 35px !important;
+}
+
+[type="radio"] + label:before, [type="radio"] + label:after {
+    right: 0 !important;
+}
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked,
+[type="radio"]:not(:checked), [type="radio"]:checked {
+    position: absolute;
+    right: -9999px;
+    visibility: hidden;
+}
+
+.select-wrapper input.select-dropdown {
+    color: #9e9e9e !important;
+}
+
+.margin-top-30 {
+    margin-top: 30px !important;
+}
+
+.margin-top-50 {
+    margin-top: 50px !important;
+}
+
+.myborder {
+    border: 1px solid red;
+}
+
+.my-prefix {
+    padding-top: 25px;
+}
+.input-field .prefix {
+    font-size: 1.5rem !important;
+    right:15px;
+}
+.card-form-align {
+    margin-top: 12px !important;
+}
+
+.range-ddp-caption {
+    text-align: right !important;
+    margin: 30px 15px -30px 0 !important;
+    color: #9e9e9e !important;
+}
+
+.brief-card {
+    overflow: hidden;
+    position: relative;
+    margin: 0.5rem 0 1rem 0;
+    background-color: #fff;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    padding: 5px 15px;
+}
+
+.inside-colapsable ul {
+    margin: 10px 0;
+}
+
+.brief-card ul li, .inside-colapsable ul li {
+    margin: 0 0 3px 0;
+    padding: 2px 10px;
+    border: 1px dotted lightgrey;
+}
+
+.brief-card ul li span, .inside-colapsable ul li span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.excel-btn {
+
+}
+
+.excel-btn a i {
+    width: inherit;
+    font-size: 1.2rem !important;
+    line-height: 1.7rem !important;
+}
+
+.my-custom-row {
+    padding-bottom: 20px;
+}
+
+/*====================== index page =============================*/
+
+.farzan-card-header {
+    text-align: center;
+    padding: 20px;
+}
+
+.farzan-card-content {
+    padding: 20px;
+}
+
+.farzan-card-header h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.farzan-card-header h4 i {
+    vertical-align: top
+}
+
+.farzan-card-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.my-dark-shadow {
+    text-shadow: 1px 1px 3px #666;
+}
+
+.my-light-shadow {
+    text-shadow: 1px 1px 3px #bbb;
+}
+
+.my-card-panel {
+    margin: 0 0 15px 0;
+    padding: 5px;
+}
+
+.index-top-text-style {
+    margin: 0;
+
+}
+
+.index-top-text-style li {
+    float: right;
+}
+
+.index-top-text-style li:nth-child(2) {
+    margin-right: 40px;
+}
+
+.farzan-item-list-style {
+    display: inline-block;
+}
+
+.farzan-item-list-style li {
+    font-size: 15pt;
+}
+
+.farzan-item-list-style li span, .index-top-text-style li span {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.img-70 {
+    width: 70px;
+}
+
+.my-row-align {
+    padding: 0 !important;
+}
+
+.amar-align {
+    padding: 17px 20px;
+}
+
+/*/////////////////////////////Farzan Footer/////////////////////////////*/
+
+/*****************************************************************
+    Item Name: FarzanInstitute - Material Design Admin Template
+    Author: Mohammad Gheydari
+    Author URL: m.gh4web@gmail.com
+*****************************************************************/
+/*circle meun*/
+
+.menu-item,
+.menu-open-button {
+    background: #EEEEEE;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+    position: absolute;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 80px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform ease-out 200ms;
+    transition: -webkit-transform ease-out 200ms;
+    transition: transform ease-out 200ms;
+    transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+}
+
+.menu-open {
+    display: none;
+}
+
+.lines {
+    width: 25px;
+    height: 3px;
+    background: #596778;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -12.5px;
+    margin-top: -1.5px;
+    -webkit-transition: -webkit-transform 200ms;
+    transition: -webkit-transform 200ms;
+    transition: transform 200ms;
+    transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.line-1 {
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0);
+}
+
+.line-2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.line-3 {
+    -webkit-transform: translate3d(0, 8px, 0);
+    transform: translate3d(0, 8px, 0);
+}
+
+.menu-open:checked + .menu-open-button .line-1 {
+    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+    transform: translate3d(0, 0, 0) rotate(45deg);
+}
+
+.menu-open:checked + .menu-open-button .line-2 {
+    -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+    transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+
+.menu-open:checked + .menu-open-button .line-3 {
+    -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+    transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 26px;
+}
+
+.menu-item:hover {
+    background: #EEEEEE;
+    color: #3290B1;
+}
+
+.menu-item:nth-child(3) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+}
+
+.menu-item:nth-child(4) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+}
+
+.menu-item:nth-child(5) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+}
+
+.menu-item:nth-child(6) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+}
+
+.menu-item:nth-child(7) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+}
+
+.menu-item:nth-child(8) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+}
+
+.menu-item:nth-child(9) {
+    -webkit-transition-duration: 180ms;
+    transition-duration: 180ms;
+}
+
+.menu-open-button {
+    z-index: 2;
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+    -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+}
+
+.menu-open-button:hover {
+    -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+    transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked + .menu-open-button {
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+    transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+    -webkit-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+    transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(3) {
+    transition-duration: 180ms;
+    -webkit-transition-duration: 180ms;
+    -webkit-transform: translate3d(0.08361px, -104.99997px, 0);
+    transform: translate3d(0.08361px, -104.99997px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(4) {
+    transition-duration: 280ms;
+    -webkit-transition-duration: 280ms;
+    -webkit-transform: translate3d(90.9466px, -52.47586px, 0);
+    transform: translate3d(90.9466px, -52.47586px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(5) {
+    transition-duration: 380ms;
+    -webkit-transition-duration: 380ms;
+    -webkit-transform: translate3d(90.9466px, 52.47586px, 0);
+    transform: translate3d(90.9466px, 52.47586px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(6) {
+    transition-duration: 480ms;
+    -webkit-transition-duration: 480ms;
+    -webkit-transform: translate3d(0.08361px, 104.99997px, 0);
+    transform: translate3d(0.08361px, 104.99997px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(7) {
+    transition-duration: 580ms;
+    -webkit-transition-duration: 580ms;
+    -webkit-transform: translate3d(-90.86291px, 52.62064px, 0);
+    transform: translate3d(-90.86291px, 52.62064px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(8) {
+    transition-duration: 680ms;
+    -webkit-transition-duration: 680ms;
+    -webkit-transform: translate3d(-91.03006px, -52.33095px, 0);
+    transform: translate3d(-91.03006px, -52.33095px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(9) {
+    transition-duration: 780ms;
+    -webkit-transition-duration: 780ms;
+    -webkit-transform: translate3d(-0.25084px, -104.9997px, 0);
+    transform: translate3d(-0.25084px, -104.9997px, 0);
+}
+.blue {
+    background-color: #669AE1;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.blue:hover {
+    color: #669AE1;
+    text-shadow: none;
+}
+
+.green {
+    background-color: #70CC72;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.green:hover {
+    color: #70CC72;
+    text-shadow: none;
+}
+
+.red {
+    background-color: #FE4365;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.red:hover {
+    color: #FE4365;
+    text-shadow: none;
+}
+
+.purple {
+    background-color: #C49CDE;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.purple:hover {
+    color: #C49CDE;
+    text-shadow: none;
+}
+
+.orange {
+    background-color: #FC913A;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.orange:hover {
+    color: #FC913A;
+    text-shadow: none;
+}
+
+.lightblue {
+    background-color: #62C2E4;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.lightblue:hover {
+    color: #62C2E4;
+    text-shadow: none;
+}
+
+.credit {
+    margin: 24px 20px 120px 0;
+    text-align: right;
+    color: #EEEEEE;
+}
+
+.credit a {
+    padding: 8px 0;
+    color: #C49CDE;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.credit a:hover {
+    text-decoration: underline;
+}
+/*end circle menu*/
+
+
+
+
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 48px;
+    line-height: 0;
+}
+.dashboard-icons {
+    width: 100px;
+    height: 100px;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 44pt;
+    padding-top: 8px;
+    padding-bottom: 15px;
+    margin: 0 auto 50px;
+    transition: 0.7s;
+    box-shadow: 0 0 2px 25px transparent;
+    /*font-size: 38pt;*/
+    /*margin: 30px auto 40px;*/
+}
+.icons h6{
+    font-size: 1.1rem !important;
+    text-align: center;
+}
+.icons .number {
+    font-size: 65pt;
+    margin-left: 20%;
+}
+/*.icons h6 {*/
+    /*font-size: 1.1rem !important;*/
+    /*text-align: left;*/
+    /*padding-left: 40px;*/
+    /*position: relative;*/
+    /*top: -25px;*/
+/*}*/
+
+
+.dashboard-icons i {
+    font-size: 25pt;
+    background-color: rgba(249, 249, 249, 0.33);
+    padding: 8px 13px;
+    border-radius: 50%;
+}
+
+td, th {
+    border-radius: 0 !important;
+}
+
+.dropdown-content li {
+    clear: both;
+    color: rgba(0, 0, 0, 0.87);
+    cursor: pointer;
+    min-height: 35px;
+    line-height: 1.5rem;
+    width: 100%;
+    text-align: right;
+    text-transform: none;
+}
+/*left comment*/
+.comment-div {
+    width: 300px;
+    position: fixed;
+    top: 22%;
+    background-color: #fff;
+    height: inherit;
+    left: 37px;
+    border-radius: 10px;
+    z-index: 999;
+    display: none;
+}
+
+/*end comment*/
+
+
+.left-fixd-comment {
+    position: fixed;
+    top: 43.5%;
+    left: -74px;
+    padding: 7px 34px;
+    border-radius: 7px;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background-color: #56A8E4;
+    color: #d9d8d6;
+}
+
+#ui-datepicker-div {
+    font-family: 'asalamat', sans-serif !important;
+    padding: 5px;
+    border-radius: 10px;
+}
+/*#ui-datepicker-div a{*/
+    /*color:#fff;*/
+    /*cursor: pointer;*/
+/*}*/
+
+/*.ui-state-hover*/
+/*{*/
+    /*font-weight: normal;*/
+/*}*/
+/*.ui-widget-header {*/
+    /*text-align: center;*/
+    /*font-weight: normal;*/
+/*}*/
+
+/*.ui-widget-header a{*/
+    /*padding-right: 20px;*/
+/*}*/
+
+.farzan-footer {
+    margin: 0 !important;
+    background-color: #484C4B;
+}
+
+.custom-row {
+    margin: 0;
+    background-color: inherit !important;
+}
+
+.farzan-table-right tr td, .farzan-table-right tr th {
+    text-align: right !important;
+    padding: 0;
+}
+
+.progress {
+    height: 8px !important;
+    border-radius: 10px !important;
+}
+
+.padding-0 {
+    padding: 0 !important;
+}
+.padding-right-80{
+    padding-right: 80px !important;
+}
+.padding-left-80{
+    padding-left: 80px !important;
+}
+.padding-left-60{
+    padding-left: 60px;
+}
+.padding-right-60{
+    padding-right: 60px !important;
+}
+.margin-top-55 {
+    margin-top: 55px !important;
+}
+
+.margin-right-20 {
+    margin-right: 20px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-38 {
+    margin-top: 38px;
+}
+
+.margin-left-20 {
+    margin-left: 20px;
+}
+
+.margin-left-30 {
+    margin-left: 30px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.padding-right-20 {
+    padding-right: 20px !important;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px !important;
+}
+
+.padding-left-20 {
+    padding-left: 20px;
+}
+
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+.padding-right-30 {
+    padding-right: 30px;
+}
+
+.padding-bottom-30 {
+    padding-bottom: 30px !important;
+}
+.padding-bottom-100{
+    padding-bottom: 100px;
+}
+
+.padding-left-30 {
+    padding-left: 30px;
+}
+
+.padding-top-30 {
+    padding-top: 30px;
+}
+
+.big-title {
+    font-size: 23pt;
+    padding-left: 74px;
+    text-align: justify;
+}
+.divider {
+    height: 2px;
+    overflow: hidden;
+    background-color: rgba(31, 30, 30, 0.29);
+}
+/*end responsive footer*/
+.copyright-text {
+    padding: 0 0 5px 0;
+}
+
+.footer-text {
+    font-size: 17px;
+}
+
+.page-footer {
+    background-color: inherit !important;
+}
+
+.footer-social-icons {
+    margin-top: 10px;
+}
+
+.footer-menu {
+    margin: 11px !important;
+}
+
+.footer-menu li {
+    color: #fff !important;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.footer-menu li a {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    color: #fff !important;
+}
+
+.footer-menu li a:hover {
+    color: #da29e0 !important;
+    /*    opacity: .9;
+    */
+}
+
+.social-icons {
+    margin: 8px 0 0 0;
+    display: inline-block;
+    float: left;
+}
+
+.footer-social-icons ul li {
+    float: left;
+}
+
+.footer-center-text {
+    margin-top: 20px;
+}
+
+.footer-logo-image img {
+    display: inline-block;
+    width: 23%;
+    position: relative;
+    top: 7px;
+}
+
+.institute-text {
+    margin-top: 30px;
+    position: relative;
+    font-size: 15px;
+    right: -25px;
+}
+
+/*footer social icon hover*/
+.hovicon {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 35px;
+    cursor: pointer;
+    margin: 3px 4px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+    color: #fff;
+    transition:0.7s;
+    box-shadow: 0 0 0 20px transparent;
+}
+
+.hovicon:before {
+    font-size: 21px;
+    line-height: 35px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    transition:0.7s;
+    box-shadow: 0 0 0 20px transparent;
+}
+
+
+.facebook-footer {
+    background-color: #345ca9 !important;
+    color: #fff !important;
+}
+.social a:hover i.facebook-footer{
+    box-shadow: 0 0 0 3px #345ca9;
+}
+.googleplus-footer {
+    background-color: #f44336 !important;
+    color: #fff !important;
+}
+.social a:hover i.googleplus-footer{
+    box-shadow: 0 0 0 3px #f44336;
+}
+.linkedin-footer {
+    color: #fff !important;
+    background-color: #1385C3 !important;
+}
+.social a:hover i.linkedin-footer{
+    box-shadow: 0 0 0 3px #1385C3;
+}
+.twitter-footer {
+    color: #fff !important;
+    background-color: #00BBFA !important;
+}
+.social a:hover i.twitter-footer{
+    box-shadow: 0 0 0 3px #00BBFA;
+}
+.instagram-footer {
+    color: #fff !important;
+    background-color: #916E50 !important;
+}
+.social a:hover i.instagram-footer{
+    box-shadow: 0 0 0 3px #916E50;
+}
+.telegram-footer {
+    color: #fff !important;
+    background-color: #2CA5E0 !important;
+}
+.social a:hover i.telegram-footer{
+    box-shadow: 0 0 0 3px #2CA5E0;
+}
+
+/* Effect 7b */
+.hovicon.effect-7.sub-b:after {
+    box-shadow: 3px 3px rgba(255, 255, 255, 1);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    -moz-transition: opacity 0.2s, -moz-transform 0.2s;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.hovicon.effect-7.sub-b:hover:after {
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.hovicon.effect-7.sub-b:before {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.hovicon.effect-7.sub-b:hover:before {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* end footer social icon*/
+
+/*end page footer*/
+
+/*/////////////////////////////Forms by gheydari /////////////////////////////*/
+/*form */
+.card-header {
+    background-color: #3294C5 !important;
+}
+
+.form-title {
+    font-size: 25px;
+    padding-right: 19px;
+    margin: 1px !important;
+}
+
+.form-text {
+    font-size: 22px;
+    margin: 25px auto;
+    width: 73%;
+}
+
+.round-form {
+    border-radius: 8px 8px 10px 10px;
+}
+
+/*form title animation*/
+#animation-formtitle {
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+}
+
+#animation-insideform {
+    animation-duration: 2.3s;
+    animation-delay: 0.9s;
+}
+
+/*divider*/
+.my-divider {
+    padding-top: 30px;
+}
+
+.or-spacer {
+    margin: 50px auto 0;
+    position: relative;
+    width: 90%;
+}
+
+.or-spacer .mask {
+    overflow: hidden;
+    height: 20px;
+}
+
+.or-spacer .mask:after {
+    content: '';
+    display: block;
+    margin: -25px auto 0;
+    width: 100%;
+    height: 25px;
+    border-radius: 125px / 12px;
+    box-shadow: 0 0 8px black;
+}
+
+/*others*/
+
+.discription {
+    margin: 25px 0 0 0;
+}
+
+.formula {
+    border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    line-height: 70px;
+    padding: 5px 13px !important;
+    color: #E06D8A;
+}
+
+.create-btn, .edit-btn, .search-btn {
+    margin: 0 0 50px 60px;
+}
+
+/*end form*/
+
+/*****************************************************************
+	Item Name: FarzanInstitute - Material Design Admin Template
+	Author: Zeynali
+*****************************************************************/
+/*.input-field input[type="text"] label{*/
+/*right: 3.75rem !important;*/
+/*}*/
+/************** style checkbox******************************/
+.mycheckbox input[type="checkbox"].filled-in + label:before, .mycheckbox input[type="checkbox"].filled-in + label:after {
+    right: 0;
+}
+
+.mycheckbox input[type="checkbox"] + label:before {
+    right: 1rem !important;
+}
+
+.mycheckbox input[type="checkbox"] + label {
+    padding-right: 2.5rem !important;
+    right: 0 !important;
+}
+
+.mycheckbox input[type="checkbox"] {
+    left: 0 !important;
+}
+
+table tr th [type="checkbox"] + label {
+    top: 6px;
+}
+
+/************************************** fix btn salamat ******************************************/
+.my-fixed-btn {
+    opacity: 0.6;
+    right: inherit;
+    left: 30px !important;
+    bottom: 115px !important;
+}
+
+.my-fixed-btn ul li {
+    left: 50px !important;
+}
+
+.salamat-btn {
+    padding: 0;
+}
+
+.salamat-btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.hasScrolled {
+    opacity: 1;
+}
+
+/************************************************ select color*****************************************/
+.farzan-select .select-dropdown {
+    width: calc(100% - 3rem) !important;
+    float: left !important;
+    margin-left: 15px !important;
+}
+
+.farzan-select .select-wrapper input.select-dropdown {
+    margin-left: 15px !important;
+    margin-top: 15px !important;
+}
+
+.farzan-select .select-wrapper span.caret {
+    left: 10px !important;
+    top: 40px;
+}
+
+/****************************** margin top all select *****************************************/
+.farzan-select ul {
+    margin-top: 60px;
+}
+
+.farzan-select .dropdown-content li {
+    padding: 0px;
+}
+
+.farzan-select .dropdown-content li > a, .farzan-select .dropdown-content li > span {
+    font-size: 20px;
+}
+
+.select-color .dropdown-content li > a, .select-color .dropdown-content li > span {
+    color: #fff;
+}
+
+/**************** select-color ********************/
+.select-color ul li:nth-child(2) {
+    background: #d3601b !important;
+}
+
+.select-color ul li:nth-child(3) {
+    background: #57864e !important;
+}
+
+.select-color ul li:last-child {
+    background: #3a63b1 !important;
+}
+
+.select-color ul li {
+    transition: box-shadow ease 0.3s;
+}
+
+.select-color ul li:hover {
+    box-shadow: 10px 0 20px #fff !important;
+}
+
+/*********************************** margin left title page **********************************/
+.mrgn-left-i {
+    margin-left: 10px !important;
+}
+
+/******** footstep table **********/
+.footsteps tr td:first-child {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.footstep-img {
+    margin: 10px;
+    display: inline-block;
+    width: 70px;
+}
+
+/*********************************** margin left title page **********************************/
+.mrgn-left-i {
+    margin-left: 10px !important;
+}
+
+#upload-key {
+    animation-duration: 2.3s;
+    animation-delay: 0.5s;
+}
+
+.ui-datepicker {
+    right: 125px;
+
+
+}
+
+/****************************** logic***************/
+.my-logic-box {
+    border: 1px solid #EEEEEE;
+    border-top: none;
+}
+
+.margin-alarm-icon {
+    margin: -10px 5px -10px 10px;
+    font-size: 3.5rem !important;
+}
+
+.farzan-table tr td [type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
+    padding-right: 0 !important;
+}
+
+/* =================-------------------  Table Options --------------------- ===============*/
+
+.farzan-table [type="radio"]:not(:checked), [type="radio"]:checked {
+    position: absolute;
+    visibility: hidden;
+    left: auto;
+}
+
+.farzan-table tbody tr:hover {
+    background-color: #bbdefb !important;
+    box-shadow: 0 0 10px #ff0000 !important;
+    -webkit-box-shadow: 0 0 10px #ff0000 !important;
+    -moz-box-shadow: 0 0 10px #ff0000 !important;
+}
+
+.farzan-table tr td {
+    font-size: 23px;
+    padding: 0;
+}
+
+.farzan-table tr td p {
+    margin: 5px;
+}
+
+.farzan-table tr td p label {
+    margin-top: 14px;
+}
+
+.pagination li.active {
+    border-radius: 50%;
+    padding: 0 12px;
+    background-color: #9C27B0 !important;
+}
+
+.active-row {
+    transition: 0.3s ease-in-out;
+    background-color: #bbdefb !important;;
+}
+
+.table-option-holder p {
+    display: inline-block;
+    margin: 20px 0 0 0;
+    font-size: 22pt;
+}
+
+.table-options {
+    display: inline-block;
+    float: left;
+    margin-left: 15px;
+}
+
+.table-options li {
+    float: left;
+    margin: 0 5px;
+}
+
+.table-options li a i {
+    font-size: 1.2rem;
+}
+
+/*//////////////// -- setting control panel -- ///////////////////*/
+
+.cp-btn-list-imp, .cp-btn-list {
+
+}
+
+.cp-btn-list-imp li, .cp-btn-list li {
+    float: right;
+    margin: 10px;
+}
+
+/*****************************************************************
+	Item Name: FarzanInstitute - Material Design Admin Template
+	Author: Faezeh Amiri
+	Author URL: f.amiri92@gmail.com
+****************************************************************/
+
+/* --------------- margin top footer -------------- */
+.margin-top-ft-10 {
+    margin-top: 8.5% !important;
+}
+
+.margin-top-ft-sc-10 {
+    margin-top: 3.5% !important;
+}
+
+.margin-top-ft-m-10 {
+    margin-top: 11.5% !important;
+}
+
+.margin-top-ft-i-10 {
+    margin-top: 21.5% !important;
+}
+
+/* --------------- end margin top footer -------------- */
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-right-40 {
+    margin-right: 40px;
+}
+
+.min-width {
+    min-width: 113px !important;
+}
+
+/*------ left card ---------*/
+
+.upload-file {
+    width: 100px;
+    height: 2.7rem !important;
+    line-height: 2.5rem !important;
+    padding: 0;
+}
+
+/*right*/
+
+.padding-lable {
+    padding-right: 5px;
+}
+
+.margin-top-70 {
+    margin-top: 70px;
+}
+
+.margin-top-mines {
+    margin-top: -20px;;
+}
+
+.margin-top-mines-30 {
+    margin-top: -30px;;
+}
+
+.text-wrapp {
+    text-wrap: none;
+    overflow: auto;
+}
+
+.margin-top-right {
+    margin-top: 95px;
+    margin-right: 5px;
+}
+
+.mypreaload {
+    width: 500px;
+    margin: 0 auto;
+    margin-right: 200px;
+}
+
+.table-popup {
+    font-size: 21px !important;
+    padding: 10px !important;
+
+}
+
+/* ---------------  START SAMANEH SALAMAT ----------------------- */
+
+.header-bg-holder {
+    background-color: #ffffff !important;
+    background: url("../../images/header-bg.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 80%;
+}
+
+.header-logo-fereshteh {
+    line-height: 15% !important;
+}
+
+.header-logo-fereshteh img {
+    width: 18%;
+    height: 18%;
+}
+
+.margin-top-mines {
+    margin-top: -15px;
+}
+
+.header-text-style {
+    font-size: 25px;
+    margin: 0 23px 0 0;
+}
+
+.header-style-hr {
+    width: 100%;
+    margin-right: -2% !important;
+}
+
+.hr2 {
+    margin-top: -5px;
+}
+
+.right-header-logo-align {
+    margin: 0 15px 0 0;
+    width: 115% !important;
+    height: 100%;
+}
+
+nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 60px !important;
+}
+
+.my-nav ul {
+    margin-right: 10px;
+}
+
+.my-nav ul li {
+    float: right;
+    margin-right: 7px;
+}
+.dropdown-content {
+    background-color: #fff;
+    margin: 0;
+    display: none;
+    min-width: 100px;
+    max-height: 650px;
+    overflow-y: auto;
+    opacity: 0;
+    overflow-x: hidden;
+    position: absolute;
+    z-index: 999;
+    will-change: width, height;
+}
+
+.header-farzan-logo {
+    width: 83%;
+    margin: 0 19px 5px 0;
+}
+.my-nav ul li a {
+    padding: 0 10px;
+    font-size: 17pt;
+    display: inline-block;
+}
+.my-nav ul li a.left-icon {
+    padding: 0 10px;
+    font-size: 20pt;
+    display: inline-block;
+}
+.my-nav ul li span {
+    font-size: 17pt;
+    margin: -7px 0 0 0 !important;
+}
+
+.my-nav ul li a i {
+    float: right;
+    margin-left: 4px;
+}
+
+.dropdown-content li a {
+    margin: 12px !important;
+    color: #B424BA;
+    float: right;
+}
+
+.controls li a.power {
+    padding-top: 3px !important;
+}
+.controls li a i:hover{
+    color: #83268c;
+    opacity: .9;
+}
+.home-icon {
+    font-size: 35px !important;
+}
+
+.home-icon-power {
+    font-size: 30px !important;
+}
+
+.padding-left-0 {
+    padding-left: 0;
+}
+
+.center-text {
+    margin: 0 auto;
+    display: block;
+}
+
+.font-size-1 {
+    font-size: 1.1rem !important;
+}
+
+/* ********************** tooltip ****************************** */
+
+
+/* *********************** end tooltip ************************** */
+
+/*********************** style card profile************************/
+.my-z-depth{
+    box-shadow: 0 7px 25px 9px rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.my-z-depth-2{
+    box-shadow: 0 -1px 1px 4px rgba(0, 0, 0, 0.1), 0 9px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.text-index {
+    font-size: 50px;
+    padding-top: 46px !important;
+}
+
+.text-index-2line {
+    font-size: 48px;
+    padding-top: 29px !important;
+}
+
+.btn-index {
+    width: 140.5px !important;
+    height: 140.5px !important;
+}
+
+.btn-index:hover {
+    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+
+.card-action h4 {
+    margin: 0;
+}
+
+.card-profile {
+    min-height: 150px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0;
+    width: 85%;
+}
+
+.card-profile-header {
+    width: 100%;
+    height: 55px;
+    background: #8C34A4;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.image-mask {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 4px solid #EEEEEE;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -35px;
+}
+
+.img-title-card {
+    width: 100%;
+    height: 100% !important;
+    margin-top: -1px;
+}
+
+.card-profile-content {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0;
+}
+
+.card-profile-content h5 {
+    margin: 0;
+}
+
+ul.card-prifile-list {
+    margin: 15px 0;
+}
+
+.card-prifile-list li p {
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.card-prifile-list li span {
+    margin-right: 10px;
+}
+
+.card-prifile-list li a {
+    font-size: 20px;
+    color: #000;
+}
+
+.fill-btn {
+    font-size: 25px;
+    padding: 0 25px 40px 25px !important;
+}
+
+.fill-btn-fpass {
+    font-size: 22px;
+    padding: 0 10px 20px 10px !important;
+}
+
+.fill-btn-register {
+    font-size: 22px;
+    padding: 0 20px 20px 20px !important;
+}
+
+.font-size {
+    font-size: 1rem !important;
+}
+
+/* ---------- input ------------- */
+
+form p {
+    text-align: center !important;
+}
+
+.input-type-logo {
+    width: 60% !important;
+}
+
+.input-type-logo-fpass {
+    width: 80% !important;
+}
+
+/* ------------------- END INPUT -------------------- */
+
+/***************************** RESPONSIVE styles***********************/
+
+/*ZERO px to 480px*/
+@media screen and (max-width: 480px) {
+
+    /********Gheydari**********/
+    .institute-text {
+        display: none;
+    }
+
+    .footer-text {
+        font-size: 12px !important;
+    }
+
+    .hovicon:before {
+        font-size: 15px;
+    }
+
+    .farzan-logo-footer {
+        display: none;
+    }
+
+    .footer-social-icons ul {
+        padding-left: 13%;
+    }
+
+    /********Sabbaghi**********/
+    /********Zeynali**********/
+    /********Amiri**********/
+    .bid {
+        margin-top: 30px;
+    }
+
+    .rbt {
+        margin-top: 60px;
+    }
+
+    .rbt4 {
+        margin-top: 80px;
+    }
+
+    /*********** -------  samaneh salamat -------- *************/
+    .edit-text {
+        font-size: 1.3rem !important;
+    }
+
+    .header-bg-holder {
+        height: 145px;
+    }
+
+    .header-logo-fereshteh img {
+        width: 50%;
+        height: 50%;
+    }
+
+    .header-text-style {
+        font-size: 19px;
+        margin-top: -2px;
+    }
+
+    .header-style-hr {
+        margin-right: -8% !important;
+    }
+
+    .hr2 {
+        margin-top: -7px;
+
+    }
+
+    .controls li a.power {
+        padding-top: 15px !important;
+    }
+}
+
+/*480px to 600px*/
+@media screen and (min-width: 480px) and (max-width: 600px) {
+
+    /********Gheydari**********/
+    .institute-text {
+        display: none;
+    }
+
+    .footer-text {
+        font-size: 13px !important;
+    }
+
+    .hovicon:before {
+        font-size: 17px;
+    }
+
+    .farzan-logo-footer {
+        display: none;
+    }
+
+    .footer-social-icons ul {
+        padding-left: 23%;
+    }
+
+    /********Sabbaghi**********/
+    /********Zeynali**********/
+    /********Amiri**********/
+    .bid {
+        margin-top: 30px;
+    }
+
+    .rbt {
+        margin-top: 60px;
+    }
+
+    .rbt4 {
+        margin-top: 80px;
+    }
+
+    /*********** -------  samaneh salamat -------- *************/
+    .header-bg-holder {
+        height: 145px;
+    }
+
+    .header-logo-fereshteh img {
+        width: 60%;
+        height: 60%;
+    }
+
+    .header-text-style {
+        font-size: 15px;
+        margin-top: -2px;
+    }
+
+    .header-style-hr {
+        margin-right: -7% !important;
+    }
+
+    .controls li a.power {
+        padding-top: 15px !important;
+    }
+
+}
+
+/*600px to 992px*/
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+
+    /********Gheydari**********/
+    .footer-text {
+        font-size: 14px !important;
+        float: right;
+    }
+
+    .hovicon:before {
+        font-size: 17px;
+    }
+
+    .farzan-logo-footer {
+        display: none;
+    }
+
+    /********Sabbaghi**********/
+    /********Zeynali**********/
+    /********Amiri**********/
+    .header-bg-holder {
+        height: 130px;
+    }
+
+    .header-logo-fereshteh img {
+        width: 60%;
+        height: 60%;
+    }
+
+    .header-text-style {
+        font-size: 19px;
+        margin: -5px 22px 0 0;
+    }
+
+    .header-style-hr {
+        margin-right: -10% !important;
+    }
+}
+
+/*992px to 992px*/
+
+@media screen  and (min-width: 768px) and (max-width: 992px) {
+    /********Amiri**********/
+    .header-bg-holder {
+        height: 145px;
+    }
+
+    .header-logo-fereshteh img {
+        width: 25%;
+        height: 25%;
+    }
+
+    .header-text-style {
+        font-size: 20pt;
+    }
+}
+
+@media screen  and (min-width: 992px) and (max-width: 1180px) {
+
+    /********Gheydari**********/
+    .institute-text {
+        display: none;
+    }
+    .header-bg-holder {
+        height: 130px;
+    }
+
+    .footer-text {
+        font-size: 15px !important;
+    }
+
+    .hovicon:before {
+        font-size: 17px;
+    }
+
+    /********Sabbaghi**********/
+    /********Zeynali**********/
+    /********Amiri**********/
+    .header-text-style {
+        font-size: 19px;
+    }
+
+    .header-style-hr {
+        margin-right: -6% !important;
+    }
+}
+
+@media screen  and (min-width: 992px) and (max-width: 1024px) {
+    /********Amiri**********/
+    .header-style-hr {
+        margin-right: -2% !important;
+    }
+}
+
+@media screen  and (min-width: 1027px) and (max-width: 1440px) {
+
+    /********Amiri**********/
+    .header-bg-holder {
+        height: 100px;
+    }
+
+    .header-logo-fereshteh img {
+        width: 15%;
+        height: 15%;
+    }
+
+    .header-text-style {
+        font-size: 22px;
+        margin: -5px 22px 0 0;
+    }
+
+    .header-style-hr {
+        margin-right: -6% !important;
+    }
+}
+
+@media screen  and (min-width: 1445px) and (max-width: 2560px) {
+
+    /********Amiri**********/
+    .header-logo-fereshteh img {
+        width: 15%;
+        height: 15%;
+    }
+
+    .header-text-style {
+        font-size: 32pt;
+        margin: -10px 28px 0 0;
+    }
+
+    .header-style-hr {
+        margin-right: -6% !important;
+    }
+
+    .margin-top-ft-10 {
+        margin-top: 4.5% !important;
+    }
+
+    .my-fixed-btn {
+        bottom: 190px !important;
+    }
+    .tooltiped-class {
+        top: 234px;
+    }
+
+    .triangle-up {
+        top: 215px;
+    }
+    .tooltiped-class2 {
+        top: 234px;
+    }
+
+    .triangle-up2 {
+        top: 215px;
+    }
+}
+
+/***************************** END RESPONSIVE styles**********************
