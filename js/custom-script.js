@@ -184,21 +184,31 @@ function removeParent(el, e) {
 }
 
 $(".add-class").click(function() {
-  $("#index-value").val(
-    $(this)
+  var index = $(this)
       .parents("tr")
-      .attr("data-index")
-  );
-  $("#classType").val($("#classType option:first").val());
-  $("input[name='Gender-tick']#men").prop("checked", true);
-  $("#hourFrom").val("");
-  $("#hourTo").val("");
+      .attr("data-index"),
+    color = $(this).css("backgroundColor");
+
+  $("#index-bg").val(color);
+  $("#classType").val(index);
+  $("#classGender").val($("#classGender option:first").val());
+  $("[id^=day]")
+    .prop("checked", false)
+    .prop("disabled", false);
+  $("[id^=hourFrom]")
+    .val("")
+    .attr("disabled", true);
+  $("[id^=hourTo]")
+    .val("")
+    .attr("disabled", true);
   $("#price-period").val("");
   $("#price-session").val("");
   $("#trainer").val("");
   $("#add-edit-type").val("add");
 
+  $("#modal-add input").removeClass("valid");
   $("#classType").material_select();
+  $("#classGender").material_select();
   Materialize.updateTextFields();
 
   $("#modal-add").openModal();
@@ -206,27 +216,42 @@ $(".add-class").click(function() {
 
 $(".add-class-btn").click(function(e) {
   e.preventDefault();
-  var index = $("#index-value").val(),
+  var days = [],
+    allDays = false,
+    bg = $("#index-bg").val(),
     classType = $("#classType option:selected").val(),
-    classTypeText = $("#classType option:selected").text(),
-    Gender = $("input[name='Gender-tick']:checked").attr("id"),
-    hourFrom = $("#hourFrom").val(),
-    hourTo = $("#hourTo").val(),
+    Gender = $("#classGender option:selected").val(),
     pricePeriod = $("#price-period").val(),
     priceSession = $("#price-session").val(),
     type = $("#add-edit-type").val(),
     trainer = $("#trainer").val();
 
-  if (type == "add") {
+  // adding checked days to array
+  $("[id^=day]").each(function() {
+    if ($(this).is(":checked")) {
+      var index = $(this)
+          .attr("id")
+          .replace("day", ""),
+        parent = $(this).parents(".row"),
+        hourFrom = parent.find("#hourFrom" + index).val(),
+        hourTo = parent.find("#hourTo" + index).val();
+      if (index == "0") {
+        allDays = true;
+      }
+      days.push([index, hourFrom, hourTo]);
+    }
+  });
+
+  if (allDays & (type == "add")) {
+    hourFrom = days[0][1];
+    hourTo = days[0][2];
     $("tbody")
-      .find("tr[data-index='" + index + "'] td:nth-child(2)")
+      .find("tr td:nth-child(2)")
       .prepend(
-        "<span class='classLabel' onClick='editClass($(this),event)' data-uniq='' data-trainer=" +
+        "<span  style='background-color:" +
+          bg +
+          "' class='classLabel' onClick='editClass($(this),event)' data-uniq='' data-trainer=" +
           trainer +
-          " data-classTypeText=" +
-          classTypeText +
-          " data-index=" +
-          index +
           " data-priceSession=" +
           priceSession +
           " data-pricePeriod=" +
@@ -240,27 +265,58 @@ $(".add-class-btn").click(function(e) {
           " data-classType=" +
           classType +
           ">" +
-          "<b>" +
-          classTypeText +
-          "</b>" +
-          " ( " +
           hourFrom +
           " - " +
           hourTo +
-          " ) " +
           "<i class='mdi-navigation-close close-icon' onClick=removeParent($(this),event)></i>" +
           "</span>"
       );
     $("#modal-add input[type=text].valid").removeClass("valid");
+  } else if (type == "add") {
+    for (var i = 0; i < days.length; i++) {
+      index = days[i][0];
+      hourFrom = days[0][1];
+      hourTo = days[i][2];
+      console.log(days[i]);
+
+      $("tbody")
+        .find("tr[data-index='" + index + "'] td:nth-child(2)")
+        .prepend(
+          "<span  style='background-color:" +
+            bg +
+            "' class='classLabel' onClick='editClass($(this),event)' data-uniq='' data-trainer=" +
+            trainer +
+            " data-priceSession=" +
+            priceSession +
+            " data-pricePeriod=" +
+            pricePeriod +
+            " data-Gender=" +
+            Gender +
+            " data-hourFrom=" +
+            hourFrom +
+            " data-hourTo=" +
+            hourTo +
+            " data-classType=" +
+            classType +
+            ">" +
+            hourFrom +
+            " - " +
+            hourTo +
+            "<i class='mdi-navigation-close close-icon' onClick=removeParent($(this),event)></i>" +
+            "</span>"
+        );
+    }
+
+    $("#modal-add input[type=text].valid").removeClass("valid");
   } else {
+    hourFrom = days[0][1];
+    hourTo = days[0][2];
     var uniq = type.slice(5);
     $(".classLabel[data-uniq^='" + uniq + "']").replaceWith(
-      "<span class='classLabel' onClick='editClass($(this),event)' data-uniq='' data-trainer=" +
+      "<span  style='background-color:" +
+        bg +
+        "' class='classLabel' onClick='editClass($(this),event)' data-uniq='' data-trainer=" +
         trainer +
-        " data-classTypeText=" +
-        classTypeText +
-        " data-index=" +
-        index +
         " data-priceSession=" +
         priceSession +
         " data-pricePeriod=" +
@@ -274,11 +330,9 @@ $(".add-class-btn").click(function(e) {
         " data-classType=" +
         classType +
         ">" +
-        "<b>" +
-        classTypeText +
-        "</b>" +
-        " از " +
-        (hourFrom + " تا " + hourTo) +
+        hourFrom +
+        " - " +
+        hourTo +
         "<i class='mdi-navigation-close close-icon' onClick=removeParent($(this),event)></i>" +
         "</span>"
     );
@@ -293,43 +347,87 @@ function editClass(el, e) {
   var random = getRandom(2000000, 4000000);
   $(el).attr("data-uniq", random);
 
-  var index = $(el).attr("data-index"),
+  var day = $(el)
+      .parents("tr")
+      .attr("data-index"),
+    color = $(el).css("backgroundColor"),
     classType = $(el).attr("data-classType"),
-    // classTypeText = $(el).attr("data-classTypeText"),
     Gender = $(el).attr("data-Gender"),
     hourFrom = $(el).attr("data-hourFrom"),
     hourTo = $(el).attr("data-hourTo"),
     pricePeriod = $(el).attr("data-pricePeriod"),
     priceSession = $(el).attr("data-priceSession"),
     trainer = $(el).attr("data-trainer");
-  $("#index-value").val(index);
+
+  $("#index-bg").val(color);
   $("#add-edit-type").val("edit_" + random);
   $("#classType").val(classType);
-  $("input[name='Gender-tick']#" + Gender).prop("checked", true);
-  $("#hourFrom").val(hourFrom);
-  $("#hourTo").val(hourTo);
+  $("#classGender").val(Gender);
   $("#price-period").val(pricePeriod);
   $("#price-session").val(priceSession);
   $("#trainer").val(trainer);
 
+  $("[id^=hourFrom]")
+    .val("")
+    .attr("disabled", true);
+  $("[id^=hourTo]")
+    .val("")
+    .attr("disabled", true);
+  $("[id^=day]")
+    .prop("checked", false)
+    .prop("disabled", true);
+  $("#day" + day)
+    .prop("checked", true)
+    .prop("disabled", false);
+  $("#hourFrom" + day)
+    .attr("disabled", false)
+    .val(hourFrom);
+  $("#hourTo" + day)
+    .attr("disabled", false)
+    .val(hourTo);
+
+  $("#modal-add input").removeClass("valid");
   $("#classType").material_select();
+  $("#classGender").material_select();
   Materialize.updateTextFields();
 
   $("#modal-add").openModal();
-
-  // console.log($(el).attr("data-classType"));
-  $("#modal-add").openModal();
 }
+
+$("[id^=day]").on("change", function() {
+  var index = $(this)
+      .attr("id")
+      .replace("day", ""),
+    parent = $(this).parents(".row");
+  if (index == 0) {
+    if ($(this).is(":checked")) {
+      for (var i = 1; i < 8; i++) {
+        parent.find("#hourFrom" + i).attr("disabled", true);
+        parent.find("#hourTo" + i).attr("disabled", true);
+        parent.find("#day" + i).attr("checked", false);
+      }
+      parent.find("#hourFrom" + index).attr("disabled", false);
+      parent.find("#hourTo" + index).attr("disabled", false);
+    } else {
+      parent.find("#hourFrom" + index).attr("disabled", true);
+      parent.find("#hourTo" + index).attr("disabled", true);
+    }
+  } else if ($(this).is(":checked")) {
+    parent.find("#hourFrom" + index).attr("disabled", false);
+    parent.find("#hourTo" + index).attr("disabled", false);
+    parent.find("#hourFrom0").attr("disabled", true);
+    parent.find("#hourTo0").attr("disabled", true);
+    parent.find("#day0").attr("checked", false);
+  } else {
+    parent.find("#hourFrom" + index).attr("disabled", true);
+    parent.find("#hourTo" + index).attr("disabled", true);
+  }
+});
 
 function deleteFromGallery(el, e) {
   e.preventDefault();
-  // $(el).closest('.owl-item').trigger('del.owl.carousel', $(this).index()).trigger('refresh.owl.carousel');
-  // var indexToRemove = parseInt(
-  //   $(el)
-  //     .parents(".item")
-  //     .attr("data-index")
-  // );
-  // console.log("deleted", indexToRemove);
+  $(".owl-carousel").owlCarousel("destroy");
+  Slider();
   $(el)
     .parents(".owl-item")
     .remove()
