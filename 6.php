@@ -157,19 +157,6 @@
                             <i class="mdi-action-assignment"></i>
                         </a>
                     </li>
-<!--                    <li>-->
-<!--                        <a class="btn-floating btn-flat waves-effect waves-light  purple darken-1 white-text disabled tooltip-top"-->
-<!--                           title="نمایش">-->
-<!--                            <i class="mdi-action-visibility"></i>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a class="btn-floating btn-flat waves-effect waves-light  teal darken-3 white-text disabled tooltip-top"-->
-<!--                           title="ویرایش">-->
-<!--                            <i class="mdi-editor-mode-edit"></i>-->
-<!--                        </a>-->
-<!--                    </li>-->
-
                 </ul>
             </div>
             <div class="clear"></div>

@@ -10,7 +10,7 @@
     <ul class="fixed-fab">
        <!-- <li><a href="http://shop1.farama.net" class="btn-floating fab-btn teal darken-3 tooltip-right farakala-color" title="محصولات سلامت">
                فراکالا </a></li> -->
-       <li><a href="http://social1.farama.net" class="btn-floating fab-btn faranet-color tooltip-right faranet-color" title=" شبکه اجتماعی سلامت"> فرانت </a>
+       <li><a href="http://social1.farama.net" class="btn-floating fab-btn faranet-color tooltip-right faranet-color" title=" شبکه اجتماعی سلامت"> فیت نت </a>
        </li>
 
        <li><a href="http://fararu.fitasa.ir/" class="btn-floating fab-btn tooltip-right farahoosh-color" title="پرونده هوشمند فعالیت بدنی و تناسب اندام"> فرارو </a></li>

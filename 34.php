@@ -231,7 +231,31 @@
                                   <h3>پیلاتس 1</h3>
                                   <p> روز/روزهای: شنبه، یک شنبه، دوشنبه <span style="padding-right: 20px">ساعت: 10:20 تا 11:00</span></p>
                                   <p>نام مربی: فلان فلانی</p>
-                                  <p>قیمت ماهانه: 200,000 تومان</p>
+                                  <div class="clear" style="margin-top:15px"></div>                                  
+                                  <span class="right">قیمت ماهانه: 200,000 تومان</span>
+                                  <div class="input-field farzan-select right" style="margin-top: -7px !important;margin-right: 15px;">
+                                        <i class="mdi-editor-attach-money prefix"></i>
+                                        <label>قیمت</label>
+                                        <select title="قیمت">
+                                            <option value="1">گزینه 1</option>
+                                            <option value="2">گزینه 2</option>
+                                            <option value="3">گزینه 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="clear" style="margin-top:30px"></div>
+                                    <span class="right">قیمت روزانه: 200,000 تومان</span>
+
+                                    <div class="input-field farzan-select right" style="margin-top: -7px !important;margin-right: 15px;">
+                                        <i class="mdi-editor-attach-money prefix"></i>
+                                        <label>قیمت</label>
+                                        <select title="قیمت">
+                                            <option value="1">گزینه 1</option>
+                                            <option value="2">گزینه 2</option>
+                                            <option value="3">گزینه 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="clear"></div>
+                                  
                               </div>
                                 <div class="card tab-card">
                                     <h3>پیلاتس 2</h3>

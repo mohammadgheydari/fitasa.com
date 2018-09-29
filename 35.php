@@ -3,10 +3,24 @@
     .card-content{
         padding-top: 5px !important;
     }
+    .number{
+        background: #00b8d4;
+        color: #fff;
+        width: 25px;
+        display: inline-block;
+        height: 25px;
+        text-align: center;
+        line-height: 27px;
+        border-radius: 50%;
+    }
+    .card.white section{
+        text-align: center;
+        margin-bottom: 4rem;
+    }
 </style>
 </head>
 <body>
-<?php include 'header-user.php'; ?>
+<?php include 'header-user-app.php'; ?>
 
 <!-- //////////////////////////////////// Content Section //////////////////////////////////////// -->
 <div class="container">
@@ -23,22 +37,31 @@
             <div class=" card z-depth-1 card-content white">
                 <div class="clear margin-bottom-10"></div>
 
-                <h3 class="card-title">مراحل کار:</h3>
-                <p>1.فیت آسا را فعال کنید: تلگرام یا بله</p>
-                <small>عدد 1 را به 3025 ارسال کنید</small>
-                <br>
-                <br>
-                <p>2.اپلیکیشن موبال را نصب کنید</p>
-                <a href="#"><small>لینک دانلود اندروید</small></a>
-                <br>
+                <section>
+                    <h3 class="card-title right-align">مراحل کار:</h3>
+                    <p><span class="number">1</span> فیت آسا را فعال کنید:</p>
+                    <a href="#" class="waves-effect waves-light btn cyan accent-4 ">تلگرام</a>
+                    <a href="#" class="waves-effect waves-light btn cyan accent-4 ">بله</a>
+                    <p><small>عدد 1 را به 3025 ارسال کنید</small></p>
+                </section>
+               
+               <section>
+                    <p><span class="number">2</span> اپلیکیشن موبال را نصب کنید</p>
+                    <a href="#" class="waves-effect waves-light btn cyan accent-4 ">لینک دانلود اندروید</a>
+                    <a href="#" class="waves-effect waves-light btn cyan accent-4">لینک دانلود ios</a>
+                </section>
+              
+                <section>
+                    <p><span class="number">3</span> باشگاه خود را انتخاب کنید</p>
+                    <img src="images/ways.png" alt="">
+                </section>
 
-                <a href="#"><small>لینک دانلود ios</small></a>
-                <br>
-                <br>
-                <p>3. باشگاه خود را انتخاب کنید</p>
-                <br>
 
-                <p>4.از سلامت و تناسب خود لذت ببرید</p>
+               <section>
+                    <p><span class="number">4</span> از سلامت و تناسب خود لذت ببرید</p>
+                    <img src="images/heartbeat.png" alt="">
+               </section>
+
 
                 <div class="clear margin-bottom-10"></div>
             </div>
